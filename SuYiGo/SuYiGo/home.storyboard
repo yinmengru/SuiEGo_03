@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="YFh-WM-8ME">
+            <objects>
+                <navigationController storyboardIdentifier="Nav" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AXF-hi-OIg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yzu-ZI-yaT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="r4b-J6-zY1" kind="relationship" relationship="rootViewController" id="Ecd-QG-WGN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9dS-Zx-CC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-525" y="494"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="RZY-eP-79g">
+            <objects>
+                <viewController id="r4b-J6-zY1" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B8X-34-3Jb"/>
+                        <viewControllerLayoutGuide type="bottom" id="olj-r5-A79"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZGx-sC-NAw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5wR-93-xaP">
+                        <barButtonItem key="leftBarButtonItem" image="current_loc_12px" id="MfF-HG-xHS"/>
+                        <barButtonItem key="rightBarButtonItem" title="当前天气" id="38T-uB-JBr">
+                            <color key="tintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="presentRightMenuViewController:" destination="r4b-J6-zY1" id="5Vy-G0-R8J"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVZ-O7-z2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220.5" y="502"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="current_loc_12px" width="12" height="12"/>
+    </resources>
+</document>

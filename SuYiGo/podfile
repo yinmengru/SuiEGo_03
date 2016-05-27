@@ -1,0 +1,21 @@
+platform :ios,'9.0'
+target’SuYiGo’ do
+pod 'AFNetworking'
+pod 'BlocksKit'
+pod 'Masonry'
+pod 'MBProgressHUD'
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'SDWebImage'
+pod 'SVProgressHUD'
+pod 'TPKeyboardAvoiding'
+pod 'MLTransition'
+pod 'REMenu'
+pod 'RESideMenu'
+pod 'LLSlideMenu'
+pod 'RETableViewManager'
+pod 'Canvas'
+pod 'UITableView+FDTemplateLayoutCell'
+pod 'FLAnimatedImage'
+end
+
