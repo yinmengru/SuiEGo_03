@@ -49,7 +49,7 @@
     {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
-    cell.textLabel.text=@"当地天气";
+    cell.textLabel.text=@"个人中心";
     cell.imageView.image=[UIImage imageNamed:@""];
     cell.textLabel.font=[UIFont systemFontOfSize:19];
     return cell;

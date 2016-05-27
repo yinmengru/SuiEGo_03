@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A5944E81CF8766A008AC33B /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5944E71CF8766A008AC33B /* WeatherViewController.m */; };
+		4A5944EA1CF87682008AC33B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5944E91CF87682008AC33B /* MapKit.framework */; };
+		4A5944EC1CF8768B008AC33B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5944EB1CF8768B008AC33B /* CoreLocation.framework */; };
+		4A5944F01CF87739008AC33B /* MapLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5944EF1CF87739008AC33B /* MapLocationManager.m */; };
+		4A5944F61CF881A2008AC33B /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A5944F51CF881A2008AC33B /* bg.jpg */; };
 		62A78DC91CF71FBF00DFC091 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A78DC81CF71FBF00DFC091 /* main.m */; };
 		62A78DCC1CF71FBF00DFC091 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A78DCB1CF71FBF00DFC091 /* AppDelegate.m */; };
 		62A78DCF1CF71FBF00DFC091 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A78DCE1CF71FBF00DFC091 /* ViewController.m */; };
@@ -152,13 +157,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A5944E61CF8766A008AC33B /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		4A5944E71CF8766A008AC33B /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		4A5944E91CF87682008AC33B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4A5944EB1CF8768B008AC33B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4A5944EE1CF87739008AC33B /* MapLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLocationManager.h; sourceTree = "<group>"; };
+		4A5944EF1CF87739008AC33B /* MapLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLocationManager.m; sourceTree = "<group>"; };
+		4A5944F51CF881A2008AC33B /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		62A78DC41CF71FBF00DFC091 /* SuYiGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuYiGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A78DC81CF71FBF00DFC091 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		62A78DCA1CF71FBF00DFC091 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		62A78DCB1CF71FBF00DFC091 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		62A78DCD1CF71FBF00DFC091 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		62A78DCE1CF71FBF00DFC091 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		62A78DD31CF71FBF00DFC091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62A78DD31CF71FBF00DFC091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		62A78DD61CF71FBF00DFC091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62A78DD81CF71FBF00DFC091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62A78DE11CF7208A00DFC091 /* XMPPAnonymousAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPAnonymousAuthentication.h; sourceTree = "<group>"; };
@@ -446,6 +458,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5944EC1CF8768B008AC33B /* CoreLocation.framework in Frameworks */,
+				4A5944EA1CF87682008AC33B /* MapKit.framework in Frameworks */,
 				62A78F9F1CF7212000DFC091 /* CoreData.framework in Frameworks */,
 				62A78F9D1CF7211400DFC091 /* libresolv.tbd in Frameworks */,
 				62A78F9B1CF7210A00DFC091 /* libxml2.tbd in Frameworks */,
@@ -457,15 +471,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A5944E51CF87620008AC33B /* weather */ = {
+			isa = PBXGroup;
+			children = (
+				4A5944E61CF8766A008AC33B /* WeatherViewController.h */,
+				4A5944E71CF8766A008AC33B /* WeatherViewController.m */,
+			);
+			name = weather;
+			sourceTree = "<group>";
+		};
+		4A5944ED1CF87711008AC33B /* location */ = {
+			isa = PBXGroup;
+			children = (
+				4A5944EE1CF87739008AC33B /* MapLocationManager.h */,
+				4A5944EF1CF87739008AC33B /* MapLocationManager.m */,
+			);
+			name = location;
+			sourceTree = "<group>";
+		};
 		62A78DBB1CF71FBF00DFC091 = {
 			isa = PBXGroup;
 			children = (
 				62A78DC61CF71FBF00DFC091 /* SuYiGo */,
-				62A78FA01CF724C200DFC091 /* Main */,
+				62A78FA01CF724C200DFC091 /* Controller */,
 				62A78DDE1CF7208A00DFC091 /* XMPP */,
 				62A78FCE1CF7300F00DFC091 /* Denglu */,
-				62A78DC71CF71FBF00DFC091 /* Supporting Files */,
 				62A78FC11CF72B8100DFC091 /* Home */,
+				62A78DC71CF71FBF00DFC091 /* Supporting Files */,
 				62A78DC51CF71FBF00DFC091 /* Products */,
 				AF4C323347103C20578ED308 /* Pods */,
 				B91550B3CAB1C140934DA88D /* Frameworks */,
@@ -483,14 +515,14 @@
 		62A78DC61CF71FBF00DFC091 /* SuYiGo */ = {
 			isa = PBXGroup;
 			children = (
+				4A5944E51CF87620008AC33B /* weather */,
+				4A5944ED1CF87711008AC33B /* location */,
 				62A78FCC1CF72F9A00DFC091 /* Map */,
 				62A78DCA1CF71FBF00DFC091 /* AppDelegate.h */,
 				62A78DCB1CF71FBF00DFC091 /* AppDelegate.m */,
 				62A78DCD1CF71FBF00DFC091 /* ViewController.h */,
 				62A78DCE1CF71FBF00DFC091 /* ViewController.m */,
-				62A78DD31CF71FBF00DFC091 /* Assets.xcassets */,
 				62A78DD51CF71FBF00DFC091 /* LaunchScreen.storyboard */,
-				62A78FB11CF726D100DFC091 /* Main.storyboard */,
 				62A78DD81CF71FBF00DFC091 /* Info.plist */,
 			);
 			path = SuYiGo;
@@ -1249,19 +1281,27 @@
 			path = libidn;
 			sourceTree = "<group>";
 		};
-		62A78FA01CF724C200DFC091 /* Main */ = {
+		62A78FA01CF724C200DFC091 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				62A78FCD1CF72FDC00DFC091 /* YeMian */,
+				62A78FB61CF728F600DFC091 /* RootViewController.h */,
+				62A78FB71CF728F600DFC091 /* RootViewController.m */,
+				62A78FB91CF729EF00DFC091 /* SideTableViewController.h */,
+				62A78FBA1CF729EF00DFC091 /* SideTableViewController.m */,
+				62A78FBC1CF72A7A00DFC091 /* TabBarViewController.h */,
+				62A78FBD1CF72A7B00DFC091 /* TabBarViewController.m */,
 			);
-			name = Main;
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		62A78FC11CF72B8100DFC091 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				62A78FC41CF72DE100DFC091 /* LaunchScreen.storyboard */,
+				62A78FB11CF726D100DFC091 /* Main.storyboard */,
 				62A78FC21CF72DB600DFC091 /* home.storyboard */,
+				62A78FC41CF72DE100DFC091 /* LaunchScreen.storyboard */,
+				4A5944F51CF881A2008AC33B /* bg.jpg */,
+				62A78DD31CF71FBF00DFC091 /* Assets.xcassets */,
 			);
 			name = Home;
 			path = SuYiGo/XMPP;
@@ -1275,19 +1315,6 @@
 			);
 			name = Map;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		62A78FCD1CF72FDC00DFC091 /* YeMian */ = {
-			isa = PBXGroup;
-			children = (
-				62A78FB61CF728F600DFC091 /* RootViewController.h */,
-				62A78FB71CF728F600DFC091 /* RootViewController.m */,
-				62A78FB91CF729EF00DFC091 /* SideTableViewController.h */,
-				62A78FBA1CF729EF00DFC091 /* SideTableViewController.m */,
-				62A78FBC1CF72A7A00DFC091 /* TabBarViewController.h */,
-				62A78FBD1CF72A7B00DFC091 /* TabBarViewController.m */,
-			);
-			name = YeMian;
 			sourceTree = "<group>";
 		};
 		62A78FCE1CF7300F00DFC091 /* Denglu */ = {
@@ -1314,6 +1341,8 @@
 		B91550B3CAB1C140934DA88D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A5944EB1CF8768B008AC33B /* CoreLocation.framework */,
+				4A5944E91CF87682008AC33B /* MapKit.framework */,
 				B7D8378D0D27C145B9AA51E5 /* libPods-SuYiGo.a */,
 				62A78F9E1CF7212000DFC091 /* CoreData.framework */,
 				62A78F9C1CF7211400DFC091 /* libresolv.tbd */,
@@ -1389,6 +1418,7 @@
 				62A78FC51CF72DE100DFC091 /* LaunchScreen.storyboard in Resources */,
 				62A78DD41CF71FBF00DFC091 /* Assets.xcassets in Resources */,
 				62A78F921CF7208B00DFC091 /* README.txt in Resources */,
+				4A5944F61CF881A2008AC33B /* bg.jpg in Resources */,
 				62A78FD01CF7306E00DFC091 /* Denglu.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1468,9 +1498,11 @@
 				62A78F611CF7208B00DFC091 /* XMPPIQ+XEP_0060.m in Sources */,
 				62A78F581CF7208B00DFC091 /* XMPPvCardTempAdr.m in Sources */,
 				62A78F841CF7208B00DFC091 /* DDList.m in Sources */,
+				4A5944F01CF87739008AC33B /* MapLocationManager.m in Sources */,
 				62A78F251CF7208B00DFC091 /* NSNumber+XMPP.m in Sources */,
 				62A78F671CF7208B00DFC091 /* XMPPDateTimeProfiles.m in Sources */,
 				62A78F2A1CF7208B00DFC091 /* XMPPMessage.m in Sources */,
+				4A5944E81CF8766A008AC33B /* WeatherViewController.m in Sources */,
 				62A78F5E1CF7208B00DFC091 /* XMPPvCardTempTel.m in Sources */,
 				62A78F5C1CF7208B00DFC091 /* XMPPvCardTempLabel.m in Sources */,
 				62A78FCB1CF72F4300DFC091 /* MapViewController.m in Sources */,
@@ -1597,6 +1629,7 @@
 				62A78FB21CF726D100DFC091 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
