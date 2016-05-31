@@ -7,18 +7,16 @@
 //
 
 #import "WeatherViewController.h"
-#import "MapLocationManager.h"
+
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-
-
 
 #define APIKEY @"4c014bb0873acad9e08d328b3784c63b"
 #define HTTPURL @"http://apis.baidu.com/thinkpage/weather_api/suggestion"
 #define HTTPARG @"location=%@&language=zh-Hans&unit=c&start=0&days=3"
 
 
-@interface WeatherViewController ()<MapManagerLocationDelegate>
+@interface WeatherViewController ()
 @property(nonatomic,strong)UIImageView* imageView;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *weatherText;
@@ -43,12 +41,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *afterImageWeaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *afterWeaLabel;
 
-@property(nonatomic,strong)MapLocationManager* mapLocation;
-@property(nonatomic,strong)CLLocation* location;
-@property(nonatomic,strong)CLGeocoder* geocoder;/**<地理信息解码*/
-@property(nonatomic,strong)CLPlacemark* placemark;
 
-@property(nonatomic,copy)NSString* cityName;
+
+
 @end
 
 
@@ -61,48 +56,10 @@
     _imageView.frame=self.view.frame;
     [self.view addSubview:_imageView];
     
-    //真机测试
     
-    self.mapLocation=[MapLocationManager new];
-    _geocoder=[CLGeocoder new];
-    self.mapLocation.delegate=self;
-    [self.mapLocation start];
-    
+    [self request:HTTPURL withHttpArg:[NSString stringWithFormat:HTTPARG,[self chineseToPinyin:[_cityName substringToIndex:_cityName.length-1] withSpace:NO]]];
+    NSLog(@"%@",[self chineseToPinyin:[_cityName substringToIndex:_cityName.length-1] withSpace:NO]);
   
-    
-    
-}
--(void)mapManager:(MapLocationManager *)manager didUpdateAndGetLastCLLocation:(CLLocation *)location
-{
-    NSLog(@"定位成功");
-    _location=location;
-    [self getLocationInfo:location];
-}
--(void)getLocationInfo:(CLLocation*)location
-{
-    //    当前的经度
-    NSString *currentLatitude = [[NSString alloc]
-                                 initWithFormat:@"%g",
-                                 _location.coordinate.latitude];
-    
-    //    当前的纬度
-    NSString *currentLongitude = [[NSString alloc]
-                                  initWithFormat:@"%g",
-                                  _location.coordinate.longitude];
-    NSLog(@"currentLatitude:%@,currentLongitude:%@",currentLatitude,currentLongitude);
-    [_geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
-        if (error==nil && [placemarks count]>0)
-        {
-            _placemark=[placemarks lastObject];
-            _cityName=[NSString stringWithFormat:@"%@",_placemark.locality];
-            NSLog(@"cityName:%@",_cityName);
-            [self request:HTTPURL withHttpArg:[NSString stringWithFormat:HTTPARG,[self chineseToPinyin:[_cityName substringToIndex:_cityName.length-1] withSpace:NO]]];
-             NSLog(@"%@",[self chineseToPinyin:[_cityName substringToIndex:_cityName.length-1] withSpace:NO]);
-        }else
-        {
-            NSLog(@"%@",error.debugDescription);
-        }
-    }];
     
     
 }
@@ -113,16 +70,6 @@
     CFMutableStringRef string = CFStringCreateMutableCopy(NULL, 0, hanzi); CFStringTransform(string, NULL, kCFStringTransformMandarinLatin, NO); CFStringTransform(string, NULL, kCFStringTransformStripDiacritics, NO); NSString *pinyin = (NSString *)CFBridgingRelease(string); if (!withSpace) { pinyin = [pinyin stringByReplacingOccurrencesOfString:@" " withString:@""];
     }
     return pinyin;
-}
-- (void)mapManager:(MapLocationManager *)manager didFailed:(NSError *)error
-{
-    
-    NSLog(@"定位失败");
-}
-
-- (void)mapManagerServerClosed:(MapLocationManager *)manager
-{
-    NSLog(@"地图管理服务器关闭");
 }
 -(void)request:(NSString*)httpUrl withHttpArg:(NSString*)HttpArg
 {
@@ -200,7 +147,11 @@
                 }else if ([_weatherText.text isEqual:@"大雾"])
                 {
                     _weatherImage.image=[UIImage imageNamed:@"31.png"];
+                }else if ([_weatherText.text isEqual:@"雷阵雨"])
+                {
+                    _weatherImage.image=[UIImage imageNamed:@"04.png"];
                 }
+
 
             //明天的温度
             _tomHighTempLabel.text=[tomorPath objectForKey:@"high"];
@@ -242,7 +193,11 @@
                 }else if ([_tomWeaLabel.text isEqual:@"大雾"])
                 {
                     _tomimageWeatherLabel.image=[UIImage imageNamed:@"31.png"];
+                }else if ([_tomWeaLabel.text isEqual:@"雷阵雨"])
+                {
+                    _tomimageWeatherLabel.image=[UIImage imageNamed:@"04.png"];
                 }
+
 
            // 后天的温度
             _AfterHighTeLabel.text=[afterPath objectForKey:@"high"];
@@ -284,6 +239,9 @@
                 }else if ([_afterWeaLabel.text isEqual:@"大雾"])
                 {
                     _afterImageWeaLabel.image=[UIImage imageNamed:@"31.png"];
+                }else if ([_afterWeaLabel.text isEqual:@"雷阵雨"])
+                {
+                    _afterImageWeaLabel.image=[UIImage imageNamed:@"04.png"];
                 }
 
             

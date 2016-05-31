@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WeatherViewController : UIViewController
-
+@property(nonatomic,copy)NSString* cityName;
 
 @end

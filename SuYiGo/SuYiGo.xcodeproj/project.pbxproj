@@ -10,7 +10,6 @@
 		4A5944E81CF8766A008AC33B /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5944E71CF8766A008AC33B /* WeatherViewController.m */; };
 		4A5944EA1CF87682008AC33B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5944E91CF87682008AC33B /* MapKit.framework */; };
 		4A5944EC1CF8768B008AC33B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5944EB1CF8768B008AC33B /* CoreLocation.framework */; };
-		4A5944F01CF87739008AC33B /* MapLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5944EF1CF87739008AC33B /* MapLocationManager.m */; };
 		4A5944F61CF881A2008AC33B /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A5944F51CF881A2008AC33B /* bg.jpg */; };
 		62A78DC91CF71FBF00DFC091 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A78DC81CF71FBF00DFC091 /* main.m */; };
 		62A78DCC1CF71FBF00DFC091 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A78DCB1CF71FBF00DFC091 /* AppDelegate.m */; };
@@ -161,8 +160,6 @@
 		4A5944E71CF8766A008AC33B /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
 		4A5944E91CF87682008AC33B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4A5944EB1CF8768B008AC33B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		4A5944EE1CF87739008AC33B /* MapLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLocationManager.h; sourceTree = "<group>"; };
-		4A5944EF1CF87739008AC33B /* MapLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLocationManager.m; sourceTree = "<group>"; };
 		4A5944F51CF881A2008AC33B /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		62A78DC41CF71FBF00DFC091 /* SuYiGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuYiGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A78DC81CF71FBF00DFC091 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -483,8 +480,6 @@
 		4A5944ED1CF87711008AC33B /* location */ = {
 			isa = PBXGroup;
 			children = (
-				4A5944EE1CF87739008AC33B /* MapLocationManager.h */,
-				4A5944EF1CF87739008AC33B /* MapLocationManager.m */,
 			);
 			name = location;
 			sourceTree = "<group>";
@@ -1498,7 +1493,6 @@
 				62A78F611CF7208B00DFC091 /* XMPPIQ+XEP_0060.m in Sources */,
 				62A78F581CF7208B00DFC091 /* XMPPvCardTempAdr.m in Sources */,
 				62A78F841CF7208B00DFC091 /* DDList.m in Sources */,
-				4A5944F01CF87739008AC33B /* MapLocationManager.m in Sources */,
 				62A78F251CF7208B00DFC091 /* NSNumber+XMPP.m in Sources */,
 				62A78F671CF7208B00DFC091 /* XMPPDateTimeProfiles.m in Sources */,
 				62A78F2A1CF7208B00DFC091 /* XMPPMessage.m in Sources */,
